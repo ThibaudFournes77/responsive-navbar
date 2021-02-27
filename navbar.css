@@ -1,0 +1,100 @@
+.topnav{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.topnav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-elem, .icon{
+    list-style: none;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 18px;
+    height: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#navbar-interior{
+    margin-right: 20vw;
+    list-style: none;
+    font-family: 'Crimson Pro';
+    font-weight: 200;
+    font-size: 14px;
+    border: 1px solid #FFFFFF;
+    padding: 5px;
+}
+
+.menu-elem:hover{
+    font-weight: 700;
+    border-bottom: 3px solid #FFFFFF;
+}
+
+.topnav .icon{
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    .topnav .menu-elem{
+        display: none;
+    }
+    .topnav .icon{
+        display: block;
+        position: absolute;
+        top: 5vh;
+        right: 5vw;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .topnav.responsive #navbar-interior{
+        position: absolute;
+        display: none;
+    }
+
+    .topnav.responsive{
+        background-color: #181719;
+        position: fixed;
+        top: 0;
+        left: -3vw;
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+        z-index: 5;
+    }
+
+    .topnav.responsive .icon{
+        position: absolute;
+        top: 5vh;
+        right: 5vw;
+    }
+
+    .topnav.responsive .icon a{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .topnav.responsive ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .topnav.responsive .menu-elem{
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive .menu-elem{
+        margin-top: 5vh;
+    }
+}
